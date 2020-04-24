@@ -58,6 +58,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'hostipal2020.urls'
 
 TEMPLATES = [
@@ -147,9 +149,6 @@ STATICFILES_DIRS = [STATIC_DIR]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
 CKEDITOR_UPLOAD_PATH = "news/uploads/"
 
 CKEDITOR_CONFIGS = {
@@ -218,3 +217,6 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
