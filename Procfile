@@ -1,1 +1,1 @@
-web: gunicorn hospital2020.wsgi
+web: gunicorn hostipal2020.wsgi
