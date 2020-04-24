@@ -16,6 +16,9 @@ h1, h2, h3, h4, h5 {
 
 .main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-btn {
@@ -83,7 +86,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     color: #fff;
     opacity: 1;
-    height: 40px;
+    height: 60px;
 }
 
 .header-top .contact-info__phone {
@@ -126,7 +129,22 @@ h1, h2, h3, h4, h5 {
     align-items: center;
 }
 
+.header-top .contact-info__right .contact-info__email{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .header-top .contact-info__right a {
+    color: #fff;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.header-top .contact-info__left a {
     color: #fff;
     cursor: pointer;
     padding: 0 10px;
@@ -137,6 +155,13 @@ h1, h2, h3, h4, h5 {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+}
+
+.header-top .contact-info__right .contact-info__email:hover{
+    color: green;
+    /*-webkit-transition: 0s;*/
+    /*-o-transition: 0s;*/
+    /*transition: 0s;*/
 }
 
 .header-top .contact-info__right i {
@@ -545,10 +570,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .main .news .news__list .one-news {
-    margin: 20px;
+    margin: 30px;
     min-width: 300px;
-    width: 30%;
-    max-width: 510px;
+    width: 25vw;
+    max-width: 450px;
     position: relative;
     cursor: pointer;
 }
@@ -562,6 +587,7 @@ h1, h2, h3, h4, h5 {
 
 .main .news .news__list .one-news .one-news__img {
     max-width: 100%;
+    width: 100%;
 }
 
 .main .news .news__list .one-news .one-news__text {
@@ -764,15 +790,15 @@ h1, h2, h3, h4, h5 {
 
 @media only screen and (max-width: 1200px) {
     .header-top .contact-info .contact-info__phone {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .header-top .contact-info .contact-info__right a {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .header-top .contact-info .contact-info__center .hospital-name {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .main-btn {
@@ -802,11 +828,11 @@ h1, h2, h3, h4, h5 {
 
 @media only screen and (max-width: 900px) {
     .header-top .contact-info .contact-info__phone {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .header-top .contact-info .contact-info__right a {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .header-top .contact-info .contact-info__center .hospital-name {
@@ -884,7 +910,7 @@ h1, h2, h3, h4, h5 {
         top: 40px;
         left: 0;
         display: block;
-        z-index: 100;
+        z-index: 10000000000000000000000;
         background: #fff;
         width: 100vw;
         padding: 0;
@@ -1065,9 +1091,24 @@ h1, h2, h3, h4, h5 {
         width: 100%;
     }
 
-    /*.about-us .view_news{*/
-    /*    width: 100%;*/
-    /*}*/
+    .main .work .about_us_text{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .main .work a{
+        font-size: 18px;
+    }
+
+    .not_timelong {
+        padding: 30px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .not_timelong .not_timelong_header {
+        font-size: 22px;
+        padding-bottom: 16px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1091,17 +1132,39 @@ h1, h2, h3, h4, h5 {
     .main .news .main_news {
         width: 100%;
     }
+
+    .main .work .about_us_text{
+        margin-top: 20px;
+        font-size: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .main .work a{
+        font-size: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+      .not_timelong {
+        padding: 20px;
+        font-weight: bold;
+    }
+
+    .not_timelong .not_timelong_header {
+        font-size: 20px;
+        padding-bottom: 12px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .header .contact-info .contact-info__phone {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .header .contact-info .sub-mail {
         display: block;
         padding-top: 3px;
-        font-size: 10px;
+        font-size: 14px;
         line-height: 1.5;
     }
 
@@ -1147,6 +1210,16 @@ h1, h2, h3, h4, h5 {
         font-size: 13px;
         line-height: 1;
     }
+
+    .not_timelong {
+        padding: 10px;
+    }
+
+    .not_timelong .not_timelong_header {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1248,13 +1321,13 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
     align-items: center;
     width: 70%;
-    height: 100%;
     background-color: white;
     margin-bottom: 20px;
 }
 
 .main .list_news{
-    /*padding-bottom: 20px;*/
+    /*padding-bottom: 0;*/
+    height: 100%;
     padding-top: 20px;
 }
 
@@ -1400,9 +1473,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .main .work p{
-    font-size: 24px;
+    font-size: 22px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
     vertical-align: middle;
+}
+.main .work a{
+    color: black;
 }
