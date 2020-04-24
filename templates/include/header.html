@@ -1,0 +1,46 @@
+{% load static %}
+<header class="header">
+    <div class="header-top">
+        <div class="contact-info">
+            <div class="contact-info__left">
+                <p class="contact-info__phone"> +38 (067) 419-46-82</p>
+                <p class="sub-mail contact-info__phone ">kanikovskiymedcentre@gmail.com</p>
+            </div>
+            <div class="contact-info__center">
+                <p class="hospital-name">
+                    Центр підшлункової залози та експертної хірургії
+                </p>
+                <p class="hospital-name">
+                    Лікувально-консультативний центр профeсора Каніковсьокого
+                </p>
+            </div>
+
+            <div class="contact-info__right">
+                <a href="#" class="contact-info__email">kanikovskiymedcentre@gmail.com</a>
+                <a class="contact-info__social-icon" href="https://www.facebook.com/KanikovskiyMedicalCentre"><i class="im im-facebook "></i></a>
+                <a class="contact-info__social-icon" href="https://twitter.com/kanikovskiy_med"> <i class="im im-twitter "></i></a>
+            </div>
+        </div>
+        <div class="header-top__body">
+            <div class="logo">
+                <a href="{% url 'main' %}"><img src="{% static "img/logo.png" %}" alt="logo"></a>
+            </div>
+            <div class="contact-info__center">
+                <p class="hospital-name">
+                    Центр підшлункової залози та експертної хірургії
+                    <br>
+                    Лікувально-консультативний центр профeсора Каніковсьокого
+                </p>
+            </div>
+            <nav class="menu">
+                <a class="menu__item_btn " href="javascript:void(0)"><i class="im im-menu"></i></a>
+                <a class="menu__item hide" href="{% url 'main' %}">Головна</a>
+                <a class="menu__item hide" href="/about-us/">Про нас</a>
+                <a class="menu__item hide" href="{% url 'docs' %}">Лікарі</a>
+                <a class="menu__item hide" href="{% url 'service' %}">Послуги</a>
+                <a class="menu__item hide" href="{% url 'news' %}">Пацієнту</a>
+                <a class="menu__item hide" href="{% url 'contact' %}">Контакти</a>
+            </nav>
+        </div>
+    </div>
+</header>

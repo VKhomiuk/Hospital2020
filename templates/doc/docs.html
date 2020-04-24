@@ -1,0 +1,17 @@
+{% extends 'head.html' %}
+
+{% block content %}
+    <section class="doctors">
+        <main class="main">
+            <div class="doctors-list">
+                {% for doc in docs_list %}
+                    <div class="doctor">
+                        <img src="{{ doc.image.url }}" alt="doctor img" class="doctor__img">
+                        <h4 class="doctor__name">{{ doc.name }}</h4>
+                        <p class="doctor__info">{{ doc.speciality }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+    </section>
+{% endblock content %}

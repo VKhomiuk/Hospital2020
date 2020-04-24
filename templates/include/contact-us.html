@@ -1,0 +1,21 @@
+{% load static %}
+    <div class="contact-us__body">
+        <div class="map">
+        </div>
+        <form action="{% url 'main' %}" method="post" class="form" id="form">
+            {% csrf_token %}
+            <label> ПІБ*
+                <input name="name" type="text" required>
+            </label>
+            <label> Телефон*
+                <input name="phone" class="phone" placeholder="+38 (___)___-__-__" type="text" required>
+            </label>
+            <label> E-mail*
+                <input name="email" class="email" type="email" required>
+            </label>
+            <label> Повідомлення
+                <textarea name="msg" rows="7" cols="45" required></textarea>
+            </label>
+            <button type="submit" id="submitForm" class="main-btn">Записатись на прийом</button>
+        </form>
+    </div>

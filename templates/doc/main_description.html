@@ -1,0 +1,86 @@
+{% extends 'doc/base.html' %}
+{% load static %}
+{% block main %}
+    <section class="about-us background-section">
+        {#                <h5 class="section-header">#}
+        <div class="not_timelong">
+            <h2>Безкоштовні онлайн консультації в період карантину!!!</h2>
+{#            <p>Телефонуйте за номером - 0978258526</p>#}
+        </div>
+        <div class="hz"></div>
+        <div class="about-us__body">
+            <img src="{% static "img/22338.jpg" %}" class="about-us__img">
+            <p class="about-us__text">
+                <span>Інколи в житті з’являються моменти коли Ви потребуєте кваліфікованої допомоги професіоналів.
+                    Саме в таких випадках важлива інша думка, думка лікаря – експерта. <br/><br/>В лікувально-консультативному
+                    центрі Ви отримаєте експертне заключення, що дозволить прийняти правильне рішення про оптимальний
+                    метод лікування захворювання. Ми пропонуємо операцію тільки в тих випадках коли операція дійсно
+                    необхідна. При можливості вирішення проблеми іншим шляхом, наші фахівці запропонують альтернативні
+                    способи лікування.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-header">
+            Послуги
+        </h2>
+        <div class="services__body">
+            {% for service in services %}
+                <div class="service">
+                    <a href="{% url 'service' %}">
+                        <div class="service__img-cover">
+                            <img src="{{ service.picture.url }}" alt="" class="service__img">
+                        </div>
+                        <h3 class="service__title">{{ service.name }}</h3>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'service' %}">
+            <button class="main-btn">Більше послуг</button>
+        </a>
+    </section>
+
+    <section class="doctors">
+        <h2 class="section-header">
+            Наші лікарі
+        </h2>
+        <div class="doctors-list">
+            {% for doc in docs_list %}
+                <div class="doctor">
+                    <img src="{{ doc.image.url }}" alt="doctor img" class="doctor__img">
+                    <h4 class="doctor__name">{{ doc.name }}</h4>
+                    <p class="doctor__info">{{ doc.speciality }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="news background-section">
+        <h2 class="section-header">
+            Новини
+        </h2>
+        <div class="news__list">
+            {% for new in news %}
+                <div class="one-news">
+                    <a href="/patient/{{ new.slug }}">
+                        <img src="{{ new.image.url }}" alt="news" class="one-news__img">
+                        <p class="one-news__text">{{ new.annotation }}</p></a>
+                </div>
+            {% endfor %}
+            <div class="facebook-window">
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/KanikovskiyMedicalCentre/?modal=admin_todo_tour"
+                     data-tabs="timeline" data-width="500px" data-height="410px" data-small-header="false"
+                     data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                    <blockquote cite="https://www.facebook.com/KanikovskiyMedicalCentre/?modal=admin_todo_tour"
+                                class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/KanikovskiyMedicalCentre/?modal=admin_todo_tour">Kanikovskiy
+                        Medical Centre</a></blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main %}

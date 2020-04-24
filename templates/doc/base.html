@@ -1,0 +1,14 @@
+{% extends "head.html" %}
+{% block content %}
+    {% include 'include/slider.html' %}
+    <main class="main">
+        {% block main %}
+        {% endblock main %}
+        <section class="contact-us">
+            <h2 class="section-header">Контакти</h2>
+            {% include 'include/contact-us.html' %}
+        </section>
+    </main>
+{% endblock content %}
+
+
