@@ -126,13 +126,13 @@ h1, h2, h3, h4, h5 {
     align-items: center;
 }
 
-.header-top .contact-info__right .contact-info__left a {
+.header-top .contact-info__right a {
     color: #fff;
     cursor: pointer;
     padding: 0 10px;
 }
 
-.header-top .contact-info__right .contact-info__left a:hover {
+.header-top .contact-info__right a:hover {
     font-size: 16px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
