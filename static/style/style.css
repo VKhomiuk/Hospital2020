@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5 {
     padding: 0 calc(50% - 1000px);
 }
 
+.hide{
+    opacity: 0;
+}
+
 .main{
     flex-grow: 1;
     display: flex;
@@ -302,6 +306,10 @@ h1, h2, h3, h4, h5 {
 .header__title {
     border-right: 2px solid #000000;
     text-align: center;
+}
+
+.header__body .slider{
+    transition: .5s;
 }
 
 .header__body .slider .slide {
