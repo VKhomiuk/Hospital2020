@@ -26,7 +26,7 @@ SECRET_KEY = 'z1q^lv4+h&b6a#=1r(#c64n&71g71uj$h$trqpv51cva0a5m!t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.kanikovskiymedcentre.com.ua','kanikovskiymedcentre.com.ua']
+ALLOWED_HOSTS = ['kanikovskiymedcentre.com']
 
 
 # Application definition
