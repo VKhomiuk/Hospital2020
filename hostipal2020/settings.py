@@ -61,7 +61,7 @@ MIDDLEWARE = [
     # 'djangosecure.middleware.SecurityMiddleware',
 ]
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
