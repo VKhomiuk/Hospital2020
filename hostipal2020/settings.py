@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'djangosecure',
-    'sslserver',
 
     'ckeditor',
     'ckeditor_uploader',
@@ -58,10 +56,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    # 'djangosecure.middleware.SecurityMiddleware',
 ]
 
-SECURE_SSL_REDIRECT = False
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -125,11 +121,6 @@ TELEGRAM = {
     'bot_token': '1272805146:AAG_sv-6WY4cKMwDnndPWCAs81wwcaIO8xQ',
     'channel_name': '@MedCentreChannel',
 }
-
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
