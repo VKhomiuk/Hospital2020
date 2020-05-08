@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    # 'djangosecure.middleware.SecurityMiddleware',
+    'djangosecure.middleware.SecurityMiddleware',
 ]
 
 SECURE_SSL_REDIRECT = False
