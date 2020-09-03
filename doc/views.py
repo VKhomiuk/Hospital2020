@@ -6,6 +6,9 @@ from .models import Doc, Services, Event
 from .forms import ReceptionForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
+
+
 class Doctors(View):
     def get(self, request):
         docs = Doc.objects.all()
@@ -79,3 +82,14 @@ class Docs(View):
 class Contact(View):
     def get(self, request):
         return render(request, 'doc/contact.html')
+class Prep(View):
+    def get(self, request):
+        return render(request, 'doc/Prep.html')
+
+class After(View):
+    def get(self, request):
+        return render(request, 'doc/Page.html')
+
+class Quest(View):
+    def get(self, request):
+        return render(request, 'doc/Quest.html')

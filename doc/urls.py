@@ -9,4 +9,7 @@ urlpatterns = [
     path('patient/', views.News.as_view(), name='news'),
     path('contact/', views.Contact.as_view(), name='contact'),
     path('doctors/', views.Docs.as_view(), name='docs'),
+    path('before/', views.Prep.as_view(), name='before'),
+    path('after/', views.After.as_view(), name='after'),
+    path('quest/', views.Quest.as_view(), name='quest'),
 ]

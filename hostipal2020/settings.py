@@ -26,8 +26,8 @@ SECRET_KEY = 'z1q^lv4+h&b6a#=1r(#c64n&71g71uj$h$trqpv51cva0a5m!t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kanikovskiymedcentre.com']
-
+# ALLOWED_HOSTS = ['kanikovskiymedcentre.com']
+ALLOWED_HOSTS = ['']
 
 # Application definition
 
@@ -86,17 +86,26 @@ WSGI_APPLICATION = 'hostipal2020.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dne7fas0tbk9t',
+#         'USER': 'ohccehwnwcbnfg',
+#         'PASSWORD': '46d720123a0176f3bab66cbdc0495301fccf936a55f69d67b604613f942d9f44',
+#         'HOST': 'ec2-54-217-204-34.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dne7fas0tbk9t',
-        'USER': 'ohccehwnwcbnfg',
-        'PASSWORD': '46d720123a0176f3bab66cbdc0495301fccf936a55f69d67b604613f942d9f44',
-        'HOST': 'ec2-54-217-204-34.eu-west-1.compute.amazonaws.com',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test',
+        'USER': 'postgres',
+        'PASSWORD': '!32Vadum!32',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

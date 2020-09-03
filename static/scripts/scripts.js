@@ -45,6 +45,19 @@ addEventListener("scroll", () => {
     scrolled <= 40 && (menu.classList.remove('fixed') , contactInfo.classList.remove('hidden'));
 });
 
+$('#profileChoose').on('click',function (){
+    $('.reveal__choose').css('display','block');
+})
+
+$('.cross__close').on('click', function (){
+    $('.reveal__choose').css('display','none');
+    $('.popup__bg').css('display','none');
+
+})
+
+$('#reg__form').on('click',function (){
+    $('.popup__bg').css('display','block');
+})
 
 let phoneInput = document.querySelector('.phone')
 phoneInput.addEventListener('keydown', function (event) {

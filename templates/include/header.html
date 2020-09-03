@@ -11,13 +11,13 @@
                     Центр підшлункової залози та експертної хірургії
                 </p>
                 <p class="hospital-name">
-                    Лікувально-консультативний центр профeсора Каніковсьокого
+                    Клініка професора Каніковського
                 </p>
             </div>
 
             <div class="contact-info__right">
                 <a href="mailto:kanikovskiymedcentre@gmail.com" class="contact-info__email">kanikovskiymedcentre@gmail.com</a>
-                <a class="contact-info__social-icon" href="https://www.facebook.com/KanikovskiyMedicalCentre"><i class="im im-facebook "></i></a>
+                <a class="contact-info__social-icon" href="https://www.facebook.com/%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%BE%D1%80%D0%B0-%D0%9A%D0%B0%D0%BD%D1%96%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE-100246041715640/"><i class="im im-facebook "></i></a>
                 <a class="contact-info__social-icon" href="https://twitter.com/kanikovskiy_med"> <i class="im im-twitter "></i></a>
             </div>
         </div>
@@ -29,7 +29,8 @@
                 <p class="hospital-name">
                     Центр підшлункової залози та експертної хірургії
                     <br>
-                    Лікувально-консультативний центр профeсора Каніковсьокого
+                    КЛІНІКА ПРОФЕСОРА
+КАНІКОВСЬКОГО.
                 </p>
             </div>
             <nav class="menu">
@@ -39,8 +40,43 @@
                 <a class="menu__item hide" href="{% url 'docs' %}">Лікарі</a>
                 <a class="menu__item hide" href="{% url 'service' %}">Послуги</a>
                 <a class="menu__item hide" href="{% url 'news' %}">Пацієнту</a>
+                <a class="menu__item hide" id="profileChoose">Спеціалістам</a>
                 <a class="menu__item hide" href="{% url 'contact' %}">Контакти</a>
+<!--                <div class="log__btns">-->
+<!--                    <a class="menu__item hide" id="login__form">Увійти</a>-->
+<!--                    <a class="menu__item hide" id="reg__form">Реєстрація</a>-->
+<!--                </div> -->
+
+
+
             </nav>
         </div>
     </div>
+
+    <div class="reveal__choose">
+        <div class="cross__close">x</div>
+        <div class="choose__header">
+            Виберіть вашу спеціальність:
+        </div>
+        <div class="choose__btns">
+            <a href="" target="_blank" >Хірург</a>
+            <a href="" target="_blank" >Лікарь загального профілю</a>
+        </div>
+    </div>
+<div class="popup__bg">
+    <div class="cross__close">x</div>
+    <div class="form__popup">
+        <div class="form__header">Введіть ваші данні для реєстрації</div>
+        <form action="">
+            <input type="text" placeholder="П.І.Б.">
+            <input type="text" placeholder="Дата народження">
+            <input type="tel" placeholder="Номер телефону">
+            <input type="text" placeholder="Місце роботи">
+            <input type="text" placeholder="Ваша спеціальність">
+            <input type="submit" value="Реєстрація">
+        </form>
+
+    </div>
+    </div>
+
 </header>
